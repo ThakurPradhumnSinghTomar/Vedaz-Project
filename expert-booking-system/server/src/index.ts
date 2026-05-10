@@ -18,7 +18,10 @@ const MONGODB_URI = process.env.MONGODB_URI || '';
 const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5173';
 
 app.use(helmet());
-app.use(cors({ origin: CLIENT_URL }));
+app.use(cors({
+  origin: process.env.CLIENT_URL,
+  credentials: true
+}));
 app.use(express.json());
 app.use(morgan('dev'));
 
