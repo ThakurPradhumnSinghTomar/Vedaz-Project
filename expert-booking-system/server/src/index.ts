@@ -15,7 +15,7 @@ const server = http.createServer(app);
 
 const PORT = Number(process.env.PORT || 5000);
 const MONGODB_URI = process.env.MONGODB_URI || '';
-const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5173';
+const CLIENT_URL = process.env.CLIENT_URL || 'https://vedaz-project.onrender.com';
 
 app.use(helmet());
 app.use(cors({
